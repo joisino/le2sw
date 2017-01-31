@@ -1,0 +1,588 @@
+.
+├── MonteCarlo.txt
+├── \
+├── bin
+│   ├── ch
+│   │   └── idsia
+│   │       ├── agents
+│   │       │   ├── Agent.class
+│   │       │   ├── AgentLoader.class
+│   │       │   ├── AgentsPool.class
+│   │       │   ├── AmiCoAgent.class
+│   │       │   ├── BasicLearningAgent.class
+│   │       │   ├── GAAgent.class
+│   │       │   ├── KeyOfMC.class
+│   │       │   ├── LearningAgent.class
+│   │       │   ├── LearningWithGA.class
+│   │       │   ├── LearningWithMC.class
+│   │       │   ├── MCAgent.class
+│   │       │   ├── MLPESLearningAgent.class
+│   │       │   ├── SRNESLearningAgent.class
+│   │       │   ├── SimpleAgent.class
+│   │       │   ├── controllers
+│   │       │   │   ├── BasicMarioAIAgent.class
+│   │       │   │   ├── ForwardAgent.class
+│   │       │   │   ├── ForwardJumpingAgent.class
+│   │       │   │   ├── IgnoreObstacleAgent.class
+│   │       │   │   ├── OwnAgent.class
+│   │       │   │   ├── OwnAgent2.class
+│   │       │   │   ├── RandomAgent.class
+│   │       │   │   ├── ReinforcementAgent.class
+│   │       │   │   ├── ReplayAgent.class
+│   │       │   │   ├── ScaredAgent.class
+│   │       │   │   ├── ScaredShooty.class
+│   │       │   │   ├── SimulateAgent.class
+│   │       │   │   ├── TimingAgent.class
+│   │       │   │   ├── human
+│   │       │   │   │   ├── CheaterKeyboardAgent.class
+│   │       │   │   │   └── HumanKeyboardAgent.class
+│   │       │   │   └── task3.class
+│   │       │   ├── learning
+│   │       │   │   ├── LargeMLPAgent.class
+│   │       │   │   ├── LargeSRNAgent.class
+│   │       │   │   ├── MediumMLPAgent.class
+│   │       │   │   ├── MediumSRNAgent.class
+│   │       │   │   ├── SRNAgent.class
+│   │       │   │   ├── SimpleMLPAgent.class
+│   │       │   │   ├── SmallMLPAgent.class
+│   │       │   │   └── SmallSRNAgent.class
+│   │       │   └── simplepythonagent.py
+│   │       ├── benchmark
+│   │       │   ├── experiments
+│   │       │   │   ├── EpisodicExperiment.class
+│   │       │   │   └── Experiment.class
+│   │       │   ├── mario
+│   │       │   │   ├── engine
+│   │       │   │   │   ├── Art.class
+│   │       │   │   │   ├── BgRenderer.class
+│   │       │   │   │   ├── GeneralizerEnemies.class
+│   │       │   │   │   ├── GeneralizerLevelScene.class
+│   │       │   │   │   ├── GlobalOptions.class
+│   │       │   │   │   ├── LevelRenderer.class
+│   │       │   │   │   ├── LevelScene.class
+│   │       │   │   │   ├── MarioVisualComponent.class
+│   │       │   │   │   ├── Recorder.class
+│   │       │   │   │   ├── Replayer.class
+│   │       │   │   │   ├── level
+│   │       │   │   │   │   ├── BgLevelGenerator.class
+│   │       │   │   │   │   ├── ImprovedNoise.class
+│   │       │   │   │   │   ├── Level$objCounters.class
+│   │       │   │   │   │   ├── Level.class
+│   │       │   │   │   │   ├── LevelGenerator.class
+│   │       │   │   │   │   └── SpriteTemplate.class
+│   │       │   │   │   ├── mapedit
+│   │       │   │   │   │   ├── LevelEditView.class
+│   │       │   │   │   │   ├── LevelEditor$1.class
+│   │       │   │   │   │   ├── LevelEditor.class
+│   │       │   │   │   │   └── TilePicker.class
+│   │       │   │   │   ├── resources
+│   │       │   │   │   │   ├── bgsheet.png
+│   │       │   │   │   │   ├── endscene.gif
+│   │       │   │   │   │   ├── enemysheet.png
+│   │       │   │   │   │   ├── firemariosheet.png
+│   │       │   │   │   │   ├── font.gif
+│   │       │   │   │   │   ├── itemsheet.png
+│   │       │   │   │   │   ├── logo.gif
+│   │       │   │   │   │   ├── mapsheet.png
+│   │       │   │   │   │   ├── mariosheet.png
+│   │       │   │   │   │   ├── particlesheet.png
+│   │       │   │   │   │   ├── princess.png
+│   │       │   │   │   │   ├── racoonmariosheet.png
+│   │       │   │   │   │   ├── smallmariosheet.png
+│   │       │   │   │   │   ├── test.lvl
+│   │       │   │   │   │   ├── tiles.dat
+│   │       │   │   │   │   └── worldmap.png
+│   │       │   │   │   └── sprites
+│   │       │   │   │       ├── BulletBill.class
+│   │       │   │   │       ├── CoinAnim.class
+│   │       │   │   │       ├── Enemy.class
+│   │       │   │   │       ├── FireFlower.class
+│   │       │   │   │       ├── Fireball.class
+│   │       │   │   │       ├── FlowerEnemy.class
+│   │       │   │   │       ├── GreenMushroom.class
+│   │       │   │   │       ├── Mario.class
+│   │       │   │   │       ├── Mushroom.class
+│   │       │   │   │       ├── Particle.class
+│   │       │   │   │       ├── Princess.class
+│   │       │   │   │       ├── Shell.class
+│   │       │   │   │       ├── Sparkle.class
+│   │       │   │   │       ├── Sprite.class
+│   │       │   │   │       ├── SpriteContext.class
+│   │       │   │   │       └── WaveGoomba.class
+│   │       │   │   ├── environments
+│   │       │   │   │   ├── Environment.class
+│   │       │   │   │   └── MarioEnvironment.class
+│   │       │   │   └── simulation
+│   │       │   │       ├── AmiCoSimulator.class
+│   │       │   │       └── SimulationOptions.class
+│   │       │   └── tasks
+│   │       │       ├── BasicTask.class
+│   │       │       ├── GamePlayTask.class
+│   │       │       ├── LearningTask.class
+│   │       │       ├── MarioCustomSystemOfValues.class
+│   │       │       ├── MarioSystemOfValues$timeLengthMapping.class
+│   │       │       ├── MarioSystemOfValues.class
+│   │       │       ├── MultiDifficultyProgressTask.class
+│   │       │       ├── MultiSeedProgressTask.class
+│   │       │       ├── MushroomTask.class
+│   │       │       ├── ProgressTask.class
+│   │       │       ├── ReplayTask.class
+│   │       │       ├── SystemOfValues.class
+│   │       │       └── Task.class
+│   │       ├── evolution
+│   │       │   ├── EA.class
+│   │       │   ├── Evolvable.class
+│   │       │   ├── FA.class
+│   │       │   ├── MLP.class
+│   │       │   ├── SRN.class
+│   │       │   └── ea
+│   │       │       └── ES.class
+│   │       ├── scenarios
+│   │       │   ├── Custom.class
+│   │       │   ├── Load.class
+│   │       │   ├── Main.class
+│   │       │   ├── Main2.class
+│   │       │   ├── Main3.class
+│   │       │   ├── MainOwn.class
+│   │       │   ├── MainTask2.class
+│   │       │   ├── MainTask3.class
+│   │       │   ├── MainTask4_1.class
+│   │       │   ├── MainTask4_2.class
+│   │       │   ├── MainTask4_3.class
+│   │       │   ├── Play.class
+│   │       │   ├── Replay.class
+│   │       │   ├── champ
+│   │       │   │   ├── GamePlayTrack.class
+│   │       │   │   ├── LearningTrack.class
+│   │       │   │   ├── LearningTrackMC.class
+│   │       │   │   └── TuringTestTrack.class
+│   │       │   ├── oldscenarios
+│   │       │   │   ├── CompetitionScore.class
+│   │       │   │   ├── Evolve.class
+│   │       │   │   ├── EvolveIncrementally.class
+│   │       │   │   ├── EvolveMultiSeed.class
+│   │       │   │   ├── GeneralScenario.class
+│   │       │   │   ├── MainRun.class
+│   │       │   │   └── Stats.class
+│   │       │   └── test
+│   │       │       ├── EvaluateJLink.class
+│   │       │       ├── EvolveSingle.class
+│   │       │       ├── EvolveWithChangingSeeds.class
+│   │       │       ├── PaperEvolve.class
+│   │       │       ├── PaperEvolveBatch.class
+│   │       │       ├── PlayJLink.class
+│   │       │       ├── StatsJLink.class
+│   │       │       └── StochasticityTest.class
+│   │       ├── tools
+│   │       │   ├── EvaluationInfo.class
+│   │       │   ├── EvaluationInfoStatisticalSummary.class
+│   │       │   ├── Evaluator.class
+│   │       │   ├── GameViewer$GameViewerActions.class
+│   │       │   ├── GameViewer$GameViewerView.class
+│   │       │   ├── GameViewer.class
+│   │       │   ├── MarioAIOptions.class
+│   │       │   ├── RandomCreatureGenerator.class
+│   │       │   ├── ReplayerOptions$Interval.class
+│   │       │   ├── ReplayerOptions.class
+│   │       │   ├── Scale2x.class
+│   │       │   ├── StateEncoderDecoder.class
+│   │       │   ├── ToolsConfigurator$INTERFACE_TYPE.class
+│   │       │   ├── ToolsConfigurator$ToolsConfiguratorActions.class
+│   │       │   ├── ToolsConfigurator.class
+│   │       │   ├── amico
+│   │       │   │   └── AmiCoJavaPy.class
+│   │       │   └── punj
+│   │       │       └── PunctualJudge.class
+│   │       ├── unittests
+│   │       │   ├── CmdLineOptionsTest.class
+│   │       │   ├── LevelGeneratorTest.class
+│   │       │   ├── LevelSceneTest.class
+│   │       │   ├── MarioAIBenchmarkTest.class
+│   │       │   └── MarioEnvironmentTest.class
+│   │       └── utils
+│   │           ├── ErrorCodes.class
+│   │           ├── MathX.class
+│   │           ├── ParameterContainer.class
+│   │           ├── statistics
+│   │           │   ├── StatisticalSummary$Watch.class
+│   │           │   ├── StatisticalSummary.class
+│   │           │   ├── StatisticalTests.class
+│   │           │   └── Stats.class
+│   │           └── wox
+│   │               └── serial
+│   │                   ├── AccessTest$Sub.class
+│   │                   ├── AccessTest$Super.class
+│   │                   ├── AccessTest.class
+│   │                   ├── ArrayListTest.class
+│   │                   ├── Easy.class
+│   │                   ├── EasyTest.class
+│   │                   ├── EncodeBase64.class
+│   │                   ├── ObjectReader.class
+│   │                   ├── ObjectWriter.class
+│   │                   ├── ReadTest.class
+│   │                   ├── Serial.class
+│   │                   ├── ShadowTest$X.class
+│   │                   ├── ShadowTest$Y.class
+│   │                   ├── ShadowTest.class
+│   │                   ├── SimpleReader.class
+│   │                   ├── SimpleWriter.class
+│   │                   ├── TestObject$Inner.class
+│   │                   ├── TestObject.class
+│   │                   ├── Util.class
+│   │                   └── WriterTest.class
+│   └── ownaiutils
+│       ├── DistanceIdPair.class
+│       ├── State.class
+│       └── ZobristHash.class
+├── cnn
+│   ├── __pycache__
+│   │   ├── ai.cpython-35.pyc
+│   │   ├── cnn.cpython-35.pyc
+│   │   ├── convert.cpython-35.pyc
+│   │   └── predict.cpython-35.pyc
+│   ├── ai.py
+│   ├── cnn.py
+│   ├── convert.py
+│   ├── dat
+│   │   ├── 41clear.dat
+│   │   ├── 41clear_up.dat
+│   │   ├── action.log
+│   │   ├── ai.dat
+│   │   ├── pos.dat
+│   │   ├── pred.dat
+│   │   ├── request.dat
+│   │   ├── reward.dat
+│   │   ├── reward.log
+│   │   ├── state.dat
+│   │   ├── teacher.dat
+│   │   ├── tekitou.dat
+│   │   ├── val.dat
+│   │   └── vel.dat
+│   ├── dats
+│   │   ├── 11101250.dat
+│   │   ├── 12092822.dat
+│   │   ├── 12211208.dat
+│   │   ├── 13181015.dat
+│   │   ├── 14073706.dat
+│   │   ├── 14170448.dat
+│   │   ├── 14173331.dat
+│   │   ├── 15071313.dat
+│   │   ├── 15130456.dat
+│   │   ├── normal.dat
+│   │   └── reward.log
+│   ├── init.sh
+│   ├── main.py
+│   ├── neuralai.py
+│   ├── play.py
+│   ├── predict.py
+│   ├── result
+│   │   └── log
+│   ├── state.dat
+│   ├── sunaba
+│   │   ├── a
+│   │   └── b
+│   ├── teki
+│   └── up.dat
+├── dats
+│   ├── 1479188969659.dat
+│   ├── 1479188969724.dat
+│   ├── 1479188969801.dat
+│   ├── 1479188969853.dat
+│   ├── 1479188993100.dat
+│   ├── 1479188993166.dat
+│   ├── 1479188993215.dat
+│   ├── 1479188993260.dat
+│   ├── 1479194808099.dat
+│   ├── 1479432915447.dat
+│   ├── 1479437133519_32_4.dat
+│   ├── 1479437154757_32_8.dat
+│   ├── 1479438089974_32_16.dat
+│   ├── 1479442132153_32_32.dat
+│   ├── 1479822448808_32_4.dat
+│   ├── 1479824874781_32_8.dat
+│   ├── 1479826604790_32_16.dat
+│   ├── 1479828068929_32_32.dat
+│   ├── 1479828250600_64_4.dat
+│   ├── 1479829600210_64_8.dat
+│   ├── 1479831129113_64_16.dat
+│   ├── 1479837892258_64_32.dat
+│   ├── 1479841918401_128_4.dat
+│   ├── 1479845368204_128_8.dat
+│   ├── 1479847824031_128_16.dat
+│   ├── 1479849904680_128_32.dat
+│   ├── 1479857657158_256_4.dat
+│   ├── 1479863997353_256_8.dat
+│   ├── 1479867150209_256_16.dat
+│   ├── 1479871967507_256_32.dat
+│   ├── 1479907945773_32_4.dat
+│   ├── 1479909501810_32_8.dat
+│   ├── 1479912876336_32_16.dat
+│   ├── 1479914633794_32_32.dat
+│   ├── 1479914801054_64_4.dat
+│   ├── 1479916501635_64_8.dat
+│   ├── 1479917891695_64_16.dat
+│   ├── 1479920392432_64_32.dat
+│   ├── 1479920884870_128_4.dat
+│   ├── 1479922856677_128_8.dat
+│   ├── 1479928076410_128_16.dat
+│   ├── 1479931286390_128_32.dat
+│   ├── 1479934914671_256_4.dat
+│   ├── 1479996488075_32_4.dat
+│   ├── 1479998916409_32_8.dat
+│   ├── 1480002324071_32_16.dat
+│   ├── 1480003922681_32_32.dat
+│   ├── 1480006856161_64_4.dat
+│   ├── 1480007024692_64_8.dat
+│   ├── 1480010017196_64_16.dat
+│   ├── 1480012178083_64_32.dat
+│   ├── 1480017842889_128_4.dat
+│   ├── 1480024208170_128_8.dat
+│   ├── 1480027611741_128_16.dat
+│   ├── 1480031922021_128_32.dat
+│   ├── 1480045390533_256_4.dat
+│   ├── 1480052136254_256_8.dat
+│   ├── 1480070804811_256_16.dat
+│   ├── 1480077979735_256_32.dat
+│   ├── 1480931738678_32_32.dat
+│   └── keep
+│       ├── cur.dat
+│       ├── rand_cur1_0_99.dat
+│       ├── rand_cur1_10_99.dat
+│       ├── rand_cur1_dif100.dat
+│       ├── rand_cur1_task41.dat
+│       ├── rand_cur1_task41_honmono.dat
+│       ├── rand_cur1_task42.dat
+│       ├── rand_cur1_task42_2.dat
+│       ├── rand_cur1_task43.dat
+│       ├── rand_cur1_task43_2.dat
+│       ├── rand_cur1_task43_fail.dat
+│       ├── rand_cur1_task43_score.dat
+│       └── rand_cur1_task43_score2.dat
+├── lib
+│   ├── asm-all-3.3.jar
+│   ├── jdom.jar
+│   └── junit-4.8.2.jar
+├── out
+├── resetf
+├── src
+│   ├── ch
+│   │   └── idsia
+│   │       ├── agents
+│   │       │   ├── Agent.java
+│   │       │   ├── AgentLoader.java
+│   │       │   ├── AgentsPool.java
+│   │       │   ├── AmiCoAgent.java
+│   │       │   ├── BasicLearningAgent.java
+│   │       │   ├── GAAgent.java
+│   │       │   ├── KeyOfMC.java
+│   │       │   ├── LearningAgent.java
+│   │       │   ├── LearningWithGA.java
+│   │       │   ├── LearningWithMC.java
+│   │       │   ├── MCAgent.java
+│   │       │   ├── MLPESLearningAgent.java
+│   │       │   ├── SRNESLearningAgent.java
+│   │       │   ├── SimpleAgent.java
+│   │       │   ├── controllers
+│   │       │   │   ├── BasicMarioAIAgent.java
+│   │       │   │   ├── ForwardAgent.java
+│   │       │   │   ├── ForwardJumpingAgent.java
+│   │       │   │   ├── IgnoreObstacleAgent.java
+│   │       │   │   ├── OwnAgent.java
+│   │       │   │   ├── OwnAgent2.java
+│   │       │   │   ├── RandomAgent.java
+│   │       │   │   ├── ReinforcementAgent.java
+│   │       │   │   ├── ReplayAgent.java
+│   │       │   │   ├── ScaredAgent.java
+│   │       │   │   ├── ScaredShooty.java
+│   │       │   │   ├── SimulateAgent.java
+│   │       │   │   ├── TimingAgent.java
+│   │       │   │   ├── human
+│   │       │   │   │   ├── CheaterKeyboardAgent.java
+│   │       │   │   │   └── HumanKeyboardAgent.java
+│   │       │   │   └── task3.java
+│   │       │   ├── learning
+│   │       │   │   ├── LargeMLPAgent.java
+│   │       │   │   ├── LargeSRNAgent.java
+│   │       │   │   ├── MediumMLPAgent.java
+│   │       │   │   ├── MediumSRNAgent.java
+│   │       │   │   ├── SRNAgent.java
+│   │       │   │   ├── SimpleMLPAgent.java
+│   │       │   │   ├── SmallMLPAgent.java
+│   │       │   │   └── SmallSRNAgent.java
+│   │       │   └── simplepythonagent.py
+│   │       ├── benchmark
+│   │       │   ├── experiments
+│   │       │   │   ├── EpisodicExperiment.java
+│   │       │   │   └── Experiment.java
+│   │       │   ├── mario
+│   │       │   │   ├── engine
+│   │       │   │   │   ├── Art.java
+│   │       │   │   │   ├── BgRenderer.java
+│   │       │   │   │   ├── GeneralizerEnemies.java
+│   │       │   │   │   ├── GeneralizerLevelScene.java
+│   │       │   │   │   ├── GlobalOptions.java
+│   │       │   │   │   ├── LevelRenderer.java
+│   │       │   │   │   ├── LevelScene.java
+│   │       │   │   │   ├── MarioVisualComponent.java
+│   │       │   │   │   ├── Recorder.java
+│   │       │   │   │   ├── Replayer.java
+│   │       │   │   │   ├── level
+│   │       │   │   │   │   ├── BgLevelGenerator.java
+│   │       │   │   │   │   ├── ImprovedNoise.java
+│   │       │   │   │   │   ├── Level.java
+│   │       │   │   │   │   ├── LevelGenerator.java
+│   │       │   │   │   │   └── SpriteTemplate.java
+│   │       │   │   │   ├── mapedit
+│   │       │   │   │   │   ├── LevelEditView.java
+│   │       │   │   │   │   ├── LevelEditor.java
+│   │       │   │   │   │   └── TilePicker.java
+│   │       │   │   │   ├── resources
+│   │       │   │   │   │   ├── bgsheet.png
+│   │       │   │   │   │   ├── endscene.gif
+│   │       │   │   │   │   ├── enemysheet.png
+│   │       │   │   │   │   ├── firemariosheet.png
+│   │       │   │   │   │   ├── font.gif
+│   │       │   │   │   │   ├── itemsheet.png
+│   │       │   │   │   │   ├── logo.gif
+│   │       │   │   │   │   ├── mapsheet.png
+│   │       │   │   │   │   ├── mariosheet.png
+│   │       │   │   │   │   ├── particlesheet.png
+│   │       │   │   │   │   ├── princess.png
+│   │       │   │   │   │   ├── racoonmariosheet.png
+│   │       │   │   │   │   ├── smallmariosheet.png
+│   │       │   │   │   │   ├── test.lvl
+│   │       │   │   │   │   ├── tiles.dat
+│   │       │   │   │   │   └── worldmap.png
+│   │       │   │   │   └── sprites
+│   │       │   │   │       ├── BulletBill.java
+│   │       │   │   │       ├── CoinAnim.java
+│   │       │   │   │       ├── Enemy.java
+│   │       │   │   │       ├── FireFlower.java
+│   │       │   │   │       ├── Fireball.java
+│   │       │   │   │       ├── FlowerEnemy.java
+│   │       │   │   │       ├── GreenMushroom.java
+│   │       │   │   │       ├── Mario.java
+│   │       │   │   │       ├── Mushroom.java
+│   │       │   │   │       ├── Particle.java
+│   │       │   │   │       ├── Princess.java
+│   │       │   │   │       ├── Shell.java
+│   │       │   │   │       ├── Sparkle.java
+│   │       │   │   │       ├── Sprite.java
+│   │       │   │   │       ├── SpriteContext.java
+│   │       │   │   │       └── WaveGoomba.java
+│   │       │   │   ├── environments
+│   │       │   │   │   ├── Environment.java
+│   │       │   │   │   └── MarioEnvironment.java
+│   │       │   │   └── simulation
+│   │       │   │       ├── AmiCoSimulator.java
+│   │       │   │       └── SimulationOptions.java
+│   │       │   └── tasks
+│   │       │       ├── BasicTask.java
+│   │       │       ├── GamePlayTask.java
+│   │       │       ├── LearningTask.java
+│   │       │       ├── MarioCustomSystemOfValues.java
+│   │       │       ├── MarioSystemOfValues.java
+│   │       │       ├── MultiDifficultyProgressTask.java
+│   │       │       ├── MultiSeedProgressTask.java
+│   │       │       ├── MushroomTask.java
+│   │       │       ├── ProgressTask.java
+│   │       │       ├── ReplayTask.java
+│   │       │       ├── SystemOfValues.java
+│   │       │       └── Task.java
+│   │       ├── evolution
+│   │       │   ├── EA.java
+│   │       │   ├── Evolvable.java
+│   │       │   ├── FA.java
+│   │       │   ├── MLP.java
+│   │       │   ├── SRN.java
+│   │       │   └── ea
+│   │       │       └── ES.java
+│   │       ├── scenarios
+│   │       │   ├── Custom.java
+│   │       │   ├── Load.java
+│   │       │   ├── Main.java
+│   │       │   ├── Main2.java
+│   │       │   ├── Main3.java
+│   │       │   ├── MainOwn.java
+│   │       │   ├── MainTask2.java
+│   │       │   ├── MainTask3.java
+│   │       │   ├── MainTask4_1.java
+│   │       │   ├── MainTask4_2.java
+│   │       │   ├── MainTask4_3.java
+│   │       │   ├── Play.java
+│   │       │   ├── Replay.java
+│   │       │   ├── champ
+│   │       │   │   ├── GamePlayTrack.java
+│   │       │   │   ├── LearningTrack.java
+│   │       │   │   ├── LearningTrackMC.java
+│   │       │   │   └── TuringTestTrack.java
+│   │       │   ├── oldscenarios
+│   │       │   │   ├── CompetitionScore.java
+│   │       │   │   ├── Evolve.java
+│   │       │   │   ├── EvolveIncrementally.java
+│   │       │   │   ├── EvolveMultiSeed.java
+│   │       │   │   ├── GeneralScenario.java
+│   │       │   │   ├── MainRun.java
+│   │       │   │   └── Stats.java
+│   │       │   └── test
+│   │       │       ├── EvaluateJLink.java
+│   │       │       ├── EvolveSingle.java
+│   │       │       ├── EvolveWithChangingSeeds.java
+│   │       │       ├── PaperEvolve.java
+│   │       │       ├── PaperEvolveBatch.java
+│   │       │       ├── PlayJLink.java
+│   │       │       ├── StatsJLink.java
+│   │       │       └── StochasticityTest.java
+│   │       ├── tools
+│   │       │   ├── EvaluationInfo.java
+│   │       │   ├── EvaluationInfoStatisticalSummary.java
+│   │       │   ├── Evaluator.java
+│   │       │   ├── GameViewer.java
+│   │       │   ├── MarioAIOptions.java
+│   │       │   ├── RandomCreatureGenerator.java
+│   │       │   ├── ReplayerOptions.java
+│   │       │   ├── Scale2x.java
+│   │       │   ├── StateEncoderDecoder.java
+│   │       │   ├── ToolsConfigurator.java
+│   │       │   ├── amico
+│   │       │   │   └── AmiCoJavaPy.java
+│   │       │   └── punj
+│   │       │       └── PunctualJudge.java
+│   │       ├── unittests
+│   │       │   ├── CmdLineOptionsTest.java
+│   │       │   ├── LevelGeneratorTest.java
+│   │       │   ├── LevelSceneTest.java
+│   │       │   ├── MarioAIBenchmarkTest.java
+│   │       │   └── MarioEnvironmentTest.java
+│   │       └── utils
+│   │           ├── ErrorCodes.java
+│   │           ├── MathX.java
+│   │           ├── ParameterContainer.java
+│   │           ├── statistics
+│   │           │   ├── StatisticalSummary.java
+│   │           │   ├── StatisticalTests.java
+│   │           │   └── Stats.java
+│   │           └── wox
+│   │               └── serial
+│   │                   ├── AccessTest.java
+│   │                   ├── ArrayListTest.java
+│   │                   ├── Easy.java
+│   │                   ├── EasyTest.java
+│   │                   ├── EncodeBase64.java
+│   │                   ├── ObjectReader.java
+│   │                   ├── ObjectWriter.java
+│   │                   ├── ReadTest.java
+│   │                   ├── Serial.java
+│   │                   ├── ShadowTest.java
+│   │                   ├── SimpleReader.java
+│   │                   ├── SimpleWriter.java
+│   │                   ├── TestObject.java
+│   │                   ├── Util.java
+│   │                   └── WriterTest.java
+│   └── ownaiutils
+│       ├── DistanceIdPair.java
+│       ├── State.java
+│       └── ZobristHash.java
+└── stopf
+
+76 directories, 509 files
