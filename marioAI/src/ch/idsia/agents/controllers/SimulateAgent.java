@@ -60,8 +60,7 @@ public class SimulateAgent extends BasicMarioAIAgent implements Agent {
 	
     public void reset(){
 		action = new boolean[Environment.numberOfKeys];
-	
-   }
+    }
 	
     public boolean[] getAction(){
     	if( fcnt < actions.size() ){

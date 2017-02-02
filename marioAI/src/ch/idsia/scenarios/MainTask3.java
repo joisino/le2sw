@@ -32,7 +32,6 @@ import ch.idsia.tools.MarioAIOptions;
 import ch.idsia.agents.Agent;
 import ch.idsia.agents.controllers.task3;
 import ch.idsia.agents.controllers.ForwardJumpingAgent;
-import ch.idsia.agents.controllers.IgnoreObstacleAgent;
 
 /**
  * Created by IntelliJ IDEA. User: Sergey Karakovskiy, sergey at idsia dot ch Date: Mar 17, 2010 Time: 8:28:00 AM
@@ -45,14 +44,12 @@ public static void main(String[] args)
 	int cnt[] = new int[10];
 	int kadai = -1;
 
- //for( int i = 0; i < 1000; i++ ){
+// for( int i = 0; i < 1000; i++ ){
     // final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
 	final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
-	
 
     final task3 agent = new task3();
     // final Agent agent = new ForwardJumpingAgent();
-	// final Agent agent = new IgnoreObstacleAgent();
     marioAIOptions.setAgent(agent);
 
     int seed = 0;

@@ -69,6 +69,7 @@ private boolean isDanger( int y , int x ){
 	for( int i = 0; i < 2; i++ ){
 		for( int j = 0; j < 3; j++ ){
 			if( getEnemiesCellValue(y+i,x+j) != Sprite.KIND_NONE && getEnemiesCellValue(y+i,x+j) != Sprite.KIND_FIREBALL){
+			// if( getEnemiesCellValue(y+i,x+j) != Sprite.KIND_NONE && getEnemiesCellValue(y+i,x+j) != Sprite.KIND_FIREBALL && getReceptiveFieldCellValue(y+i, x+j) != 0 ){
 				return true;
 			}
 		}
@@ -113,14 +114,14 @@ public boolean[] getAction()
 	} else {
 		action[Mario.KEY_JUMP] = true;
 	}
-
-	// if mario cannot jump and is in danger, go back 
+	
 	if( !isMarioAbleToJump && isDanger( marioEgoRow , marioEgoCol ) ){
+	// if( !isMarioOnGround && isDanger( marioEgoRow , marioEgoCol ) ){
+	// if( isDanger( marioEgoRow , marioEgoCol ) ){
 		action[Mario.KEY_RIGHT] = false;
 		action[Mario.KEY_LEFT] = true;
 	}	
 
-	// if packen is near, back.
 	if( isPackenNow( marioEgoRow , marioEgoCol ) ){
 		action[Mario.KEY_RIGHT] = false;
 		action[Mario.KEY_LEFT] = true;
@@ -130,13 +131,10 @@ public boolean[] getAction()
 	trueJumpCounter++;
 	
 	fcnt++;
-	
-	// stop speed to shoot fireball
 	if( fcnt % 8 != 0 ){
 		action[Mario.KEY_SPEED] = true;
 	}
 	
-	// if mario cannot jump, sometimes go back for safety
 	if( !isMarioAbleToJump && 1 < fcnt % 8 && fcnt % 8 < 5 ){
 		action[Mario.KEY_RIGHT] = false;
 		action[Mario.KEY_LEFT] = true;		

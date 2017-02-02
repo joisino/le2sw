@@ -32,16 +32,15 @@ public static void main(String[] args)
     
     try{
     	// 4-1 File file = new File( "dats/keep/rand_cur1_task41.dat" );
-    	// File file = new File( "dats/keep/rand_cur1_task41_honmono.dat" );
-    	// File file = new File( "dats/keep/rand_cur1_task42_2.dat" );
+    	// 4-2 File file = new File( "dats/keep/rand_cur1_task42_2.dat" );
     	// File file = new File( "dats/keep/rand_cur1_task43.dat" );
     	// dif100 File file = new File( "dats/keep/rand_cur1_dif100.dat" );
     	
     	// File file = new File( "dats/keep/rand_cur1_task43.dat" );
     	// File file = new File( "dats/keep/rand_cur1_task43_score2.dat" );
     	
-    	File file = new File( "dats/keep/cur.dat" );
-    	
+    	// File file = new File( "dats/keep/cur.dat" );
+    	File file = new File( "dats/1486007212506.dat" );
     	
     	Scanner sc = new Scanner( file );
     	
@@ -59,11 +58,12 @@ public static void main(String[] args)
     }
     
     marioAIOptions.setAgent(agent);
-    
-    // marioAIOptions.setArgs( "-lde on -i off -ltb off -ld 2 -ls 0 -le g" );
+    // marioAIOptions.setLevelDifficulty(d);
+    // marioAIOptions.setLevelRandSeed(seed);
+    marioAIOptions.setArgs( "-lde on -i off -ltb off -ld 2 -ls 0 -le g" );
     // marioAIOptions.setArgs( "-lde on -i on -ltb off -ld 2 -ls 0 -le g" );
-    // marioAIOptions.setArgs( "-lco off -lb on -le off -lhb off -lg on -ltb on -lhs off -lca on -lde on -ld 5 -ls 133829" );
-   	marioAIOptions.setArgs( "-lde on -i off -ld 30 -ls 133434 -lhb on" );
+    // 4-2 marioAIOptions.setArgs( "-lco off -lb on -le off -lhb off -lg on -ltb on -lhs off -lca on -lde on -ld 5 -ls 133829" );
+    // 4-3 marioAIOptions.setArgs( "-lde on -i off -ld 30 -ls 133434 -lhb on" );
     // dif100 marioAIOptions.setArgs( "-lde on -i off -ld 100 -ls 133434 -lhb on" );
 
     
